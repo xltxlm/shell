@@ -1,0 +1,23 @@
+{
+  "name": "xltxlm/shell",
+  "authors": [
+    {
+      "name": "copygithub",
+      "email": "xltxlm@qq.com"
+    }
+  ],
+  "minimum-stability": "dev",
+  "description": "执行系统命令",
+  "require": {
+    "php": ">=7.1",
+    "xltxlm/exception": "@dev"
+  },
+  "autoload": {
+    "psr-4": {
+      "xltxlm\\shell\\": [
+        "src/",
+        "./"
+      ]
+    }
+  }
+}

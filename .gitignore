@@ -1,0 +1,10 @@
+.idea
+temp
+php_errors.log
+*.lock
+*.flock
+*.tar.gz
+*.sql
+log@*.json
+vendor
+vendor/**/.git
