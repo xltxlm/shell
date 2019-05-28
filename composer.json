@@ -11,7 +11,7 @@
   "require": {
     "php": ">=7.1",
     "xltxlm/exception": "@dev",
-    "xltxlm/shell": "@dev"
+    "xltxlm/logger": "@dev"
   },
   "autoload": {
     "psr-4": {
