@@ -10,7 +10,8 @@
   "description": "执行系统命令",
   "require": {
     "php": ">=7.1",
-    "xltxlm/exception": "@dev"
+    "xltxlm/exception": "@dev",
+    "xltxlm/shell": "@dev"
   },
   "autoload": {
     "psr-4": {
