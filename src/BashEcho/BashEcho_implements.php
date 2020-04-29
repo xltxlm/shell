@@ -13,25 +13,25 @@ Trait BashEcho_implements
 *  高亮成红色，错误提示;
 *  @return ;
 */
-abstract public function echoerror();
+abstract public function echoerror(string $cmd = null);
 /**
 *  高亮成绿色，成功提示;
 *  @return ;
 */
-abstract public function echook();
+abstract public function echook(string $cmd = null);
 /**
 *  普通文字输出。;
 *  @return ;
 */
-abstract public function echo();
+abstract public function echo(string $cmd = null);
 /**
 *  运行脚本，如果错误了，那么就没法继续了;
 *  @return ;
 */
-abstract public function runbash();
+abstract public function runbash(string $cmd = null,bool $notice = true);
 /**
 *  构造函数，输出bash头;
 *  @return ;
 */
-abstract public function __construct();
+abstract public function bashheader();
 }

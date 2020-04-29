@@ -13,11 +13,16 @@ Trait BashEcho
     /**
      * BashEcho constructor.
      */
-    public function __construct()
+    public function bashheader()
     {
         //公共shell函数;
         echo 'function error(){ echo  -e "\033[41;36m[`date \'+%Y-%m-%d %H:%M:%S\'`] $*\033[0m";}' . PHP_EOL;
         echo 'function ok(){ echo  -e "\033[42;30m[`date \'+%Y-%m-%d %H:%M:%S\'`] $*\033[0m";}' . PHP_EOL;
+    }
+
+    public function echo(string $cmd = null)
+    {
+        echo "echo $cmd" . PHP_EOL;
     }
 
 
@@ -39,7 +44,7 @@ Trait BashEcho
      */
     public function echook(string $cmd = null)
     {
-        echo "ok $cmd" . PHP_EOL;
+        echo "ok '$cmd'" . PHP_EOL;
     }
 
     /**
@@ -47,12 +52,17 @@ Trait BashEcho
      *
      * @return ;
      */
-    public function runbash(string $cmd = null)
+    public function runbash(string $cmd = null, bool $notice = true)
     {
-        echo "ok 准备执行命令 $cmd" . PHP_EOL;
+        if ($notice) {
+            echo "ok 准备执行命令 '$cmd'" . PHP_EOL;
+        }
         echo $cmd . PHP_EOL;
+        echo "echo -e '\\n';";
         echo "if [ \$? -ne 0 ]; then error 错误！; exit; fi; " . PHP_EOL;
-        echo "ok 【完成】执行命令 $cmd" . PHP_EOL;
+        if ($notice) {
+            echo "ok 【完成】执行命令 '$cmd'" . PHP_EOL;
+        }
     }
 
 
