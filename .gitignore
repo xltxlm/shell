@@ -8,3 +8,4 @@ php_errors.log
 log@*.json
 vendor
 vendor/**/.git
+*7z
