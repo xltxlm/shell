@@ -34,4 +34,9 @@ abstract public function runbash(string $cmd = null,bool $notice = true);
 *  @return ;
 */
 abstract public function bashheader();
+/**
+*  对比2个字符串。不一样的时候，输出红色提醒;
+*  @return ;
+*/
+abstract public function diffstring(string $var1 = null,string $var2 = null, $onerror_message = null);
 }
